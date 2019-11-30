@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68602c22-9516-4d84-a726-7482aab8874d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/functions.java" afterDir="false" />
-    </list>
+    <list default="true" id="68602c22-9516-4d84-a726-7482aab8874d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +155,7 @@
       <updated>1574456535588</updated>
       <workItem from="1574456538551" duration="74647000" />
       <workItem from="1575033747367" duration="129000" />
-      <workItem from="1575033929585" duration="25100000" />
+      <workItem from="1575033929585" duration="25557000" />
     </task>
     <servers />
   </component>
