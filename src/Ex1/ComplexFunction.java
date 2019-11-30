@@ -10,6 +10,12 @@ public class ComplexFunction implements complex_function {
     private function fx1, fx2;
     private Operation op;
 
+    public ComplexFunction()
+    {
+        this.fx1=null;
+        this.fx2=null;
+        this.op=Operation.None;
+    }
     public ComplexFunction(function fx1) {
         if(fx1==null)
         {
@@ -210,8 +216,14 @@ public class ComplexFunction implements complex_function {
                 }
             }
         }
-        f1=tmp.substring(0,i+1);
-        f2=tmp.substring(i+2,tmp.length());
+        try {
+            f1 = tmp.substring(0, i + 1);
+            f2 = tmp.substring(i + 2, tmp.length());
+        }
+        catch (RuntimeException error)
+        {
+            throw new RuntimeException("Invalid input");
+        }
         function fx1=initFromString(f1);
         function fx2=initFromString(f2);
         ComplexFunction c=new ComplexFunction(operation,fx1,fx2);
@@ -336,8 +348,9 @@ public class ComplexFunction implements complex_function {
         ComplexFunction c1 = new ComplexFunction("plus",m3,m4);
         ComplexFunction cf2= new ComplexFunction("plus",m1,null);
         ComplexFunction c2 = new ComplexFunction("plus",m1,m5);
-        function f5=c2.initFromString("mul(plus((3x,4x^4),div(60x^2,5x))");
+        function f5=c2.initFromString("mul(plus(3x,4x^4),div(60x^2,5))");
         System.out.println(f5.toString());
+        System.out.println(f5.f(1));
 //        ComplexFunction c3 = new ComplexFunction("div",m1,m5);
 //        double b=c3.f(1);
 //        System.out.println(b);
