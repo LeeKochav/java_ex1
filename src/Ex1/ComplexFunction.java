@@ -12,8 +12,8 @@ public class ComplexFunction implements complex_function {
 
     public ComplexFunction()
     {
-        this.fx1=null;
-        this.fx2=null;
+        this.fx1=new Polynom();
+        this.fx2=new Polynom();
         this.op=Operation.None;
     }
     public ComplexFunction(function fx1) {
@@ -45,10 +45,10 @@ public class ComplexFunction implements complex_function {
         this.op = convert(s);
     }
 
-    public ComplexFunction(ComplexFunction c) {
-        this.fx1 = c.fx1;
-        this.fx2 = c.fx2;
-        this.op = c.op;
+    public ComplexFunction(ComplexFunction c) throws RuntimeException {
+            this.fx1 = c.left();
+            this.fx2 = c.right();
+            this.op = c.getOp();
     }
 
     @Override
@@ -130,11 +130,19 @@ public class ComplexFunction implements complex_function {
 
     @Override
     public function left() {
+        if(this.fx1==null)
+        {
+            throw new NullPointerException("Complex function is not initialized with left function");
+        }
         return this.fx1;
     }
 
     @Override
     public function right() {
+        if(this.fx2==null)
+        {
+            throw new NullPointerException("Complex function is not initialized with right function");
+        }
         return this.fx2;
     }
 
@@ -144,7 +152,7 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
-    public double f(double x) {//to hanle in tets- throws Arith, Runtime exception
+    public double f(double x) {
         double res = 0;
 
         switch (this.op) {
@@ -178,27 +186,28 @@ public class ComplexFunction implements complex_function {
                 }
                 break;
             case Error:
-                throw new RuntimeException("Invalid input");
+                throw new RuntimeException("Error operation is not a valid action on complex function");
         }
         return res;
     }
 
     @Override
     public function initFromString(String s) {
+
         int indexFirstLeft=s.indexOf('(');
         int indexLastRight=s.lastIndexOf(')');
-        if(indexLastRight==-1||indexFirstLeft==-1)
+        if(indexLastRight==-1||indexFirstLeft==-1) //base case of the recursion
         {
             Polynom p=new Polynom(s);
             return p;
         }
         String operation=s.substring(0,indexFirstLeft);
-        String tmp=s.substring(indexFirstLeft+1,indexLastRight);
-        Stack<Character> st=new Stack<Character>();
+        String tmp=s.substring(indexFirstLeft+1,indexLastRight); //tmp is the substring that contains f1,f2
+        Stack<Character> st=new Stack<Character>(); // stack contains the opening brackets
         String f1="";
         String f2="";
         int i;
-        for(i=0; i<tmp.length(); i++)
+        for(i=0; i<tmp.length(); i++) //validate that the functions has the same opening brackets and closing brackets.
         {
             int indexCurrLeft=0;
             if(st.isEmpty()&&(tmp.charAt(i)==','))
@@ -269,6 +278,7 @@ public class ComplexFunction implements complex_function {
     }
 
     public boolean equals(Object obj) {
+
         if(obj==null|this==null)
         {
             return false;
@@ -278,7 +288,7 @@ public class ComplexFunction implements complex_function {
             ComplexFunction tmp=(ComplexFunction)obj;
             if(this.fx1.equals(tmp.fx1))
             {
-                if ((this.fx2==null&&tmp.fx2!=null)||(this.fx2==null&&tmp.fx2==null))
+                if ((this.fx2==null&&tmp.fx2!=null)||(this.fx2==null&&tmp.fx2==null)) // check if both complex functions has left&right
                 {
                     return false;
                 }
@@ -335,31 +345,4 @@ public class ComplexFunction implements complex_function {
         return op;
     }
 
-    public static void main(String[] args) {
-        Monom m1 = new Monom(2,2);
-        Monom m3 = new Monom(2,2);
-        Polynom_able m2 = new Polynom("3x^3");
-        Polynom p1 = new Polynom(m2.toString());
-        Monom m4 = new Monom(3,3);
-        Monom m5 = new Monom("3x");
-        Polynom_able p2=new Polynom("3x+0+0x^2");
-        function f=null;
-        ComplexFunction cf = new ComplexFunction("plus",m1,m2);
-        ComplexFunction c1 = new ComplexFunction("plus",m3,m4);
-        ComplexFunction cf2= new ComplexFunction("plus",m1,null);
-        ComplexFunction c2 = new ComplexFunction("plus",m1,m5);
-        function f5=c2.initFromString("mul(plus(3x,4x^4),div(60x^2,5))");
-        System.out.println(f5.toString());
-        System.out.println(f5.f(1));
-//        ComplexFunction c3 = new ComplexFunction("div",m1,m5);
-//        double b=c3.f(1);
-//        System.out.println(b);
-//        System.out.println(cf.toString());
-//        System.out.println(c1.toString());
-//        System.out.println(cf.equals(c1));
-     //   System.out.println(cf2.toString());
-//        System.out.println(c2.toString());
-//        System.out.println(c2.equals(cf2));
-
-    }
 }

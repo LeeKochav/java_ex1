@@ -80,9 +80,9 @@ public class Monom implements function{
 		s=updateStringForValidation(s,containsX);
 		isValidString=checkValid(s,containsX);
 
-		if(isValidString==true)
+		if(isValidString==true) // string is valid--> create monom
 		{
-			StringTokenizer st= new StringTokenizer(s,"x^");
+			StringTokenizer st= new StringTokenizer(s,"x^"); //divide the string for coef and power
 			if(st.countTokens()==2)
 			{
 
@@ -131,6 +131,7 @@ public class Monom implements function{
 	 */
 	private String updateStringForValidation(String s, boolean containsX)
 	{
+		//handling corner cases when the input string is valid mathematics way.(+-1)
 		int xPosition=0;
 		String prefix="";
 		if(containsX==false)
@@ -170,6 +171,8 @@ public class Monom implements function{
 	 */
 	private boolean checkValid(String s, boolean containsX)
 	{
+		//check if the string is valid by comparing the input string to the pattern that represent the valid input.
+
 		Pattern patternWithOutX= Pattern.compile("(^[+-]?([0-9]*\\.([0-9]+)?|[0-9]+))$");
 		Pattern patternWithX = Pattern.compile("(^[+-]?([0-9]*\\.([0-9]+)?|[0-9]+)[x]([\\^][0-9]+)?)$");
 		Matcher matcher;
@@ -270,11 +273,11 @@ public class Monom implements function{
 	 */
 	public boolean equals(Object obj)
 	{
-		if(obj instanceof Polynom_able)
+		if(obj instanceof Polynom_able) //Monom consider as polynom with one element, if object is a polynom use Equals method of polynom
 		{
 			return obj.equals(this);
 		}
-		if(obj instanceof Monom) {
+		if(obj instanceof Monom) { //substract two monoms to find if diff is zero
 			Monom m=(Monom)obj;
 			if (this.isZero() && m.isZero()) {
 				return true;

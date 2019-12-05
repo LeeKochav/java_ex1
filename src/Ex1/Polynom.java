@@ -99,17 +99,18 @@ public class Polynom implements Polynom_able{
 
 	@Override
 	public void add(Monom m1) {
+
 		boolean add=false;
 		if(m1==null){
 			return;
 		}
-		if(this.monoms==null)
+		if(this.monoms==null) //if this == empty , add the new monom
 		{
 			this.monoms.add(m1);
 			this.monoms.sort(_Comp);
 			return;
 		}
-		for(int i=0; i<this.monoms.size(); i++)
+		for(int i=0; i<this.monoms.size(); i++) //check if the given monom power is already in the polynom to add the coeff
 		{
 			if(this.monoms.get(i).get_power()==m1.get_power())
 			{
@@ -118,7 +119,7 @@ public class Polynom implements Polynom_able{
 				break;
 			}
 		}
-		if(add==false)
+		if(add==false) //if the given monom power is not part of the monoms list that represent the polynom, add it and sort
 		{
 			this.monoms.add(m1);
 			this.monoms.sort(_Comp);
@@ -130,13 +131,13 @@ public class Polynom implements Polynom_able{
 		if(m1==null){
 			return;
 		}
-		if(this.monoms==null)
+		if(this.monoms==null) //if this == empty , sub the new monom
 		{
 			m1.multiply(Monom.MINUS1);
 			this.monoms.add(m1);
 			this.monoms.sort(_Comp);
 		}
-		for(int i=0; i<this.monoms.size(); i++)
+		for(int i=0; i<this.monoms.size(); i++) //check if the given monom power is already in the polynom to sub the coeff
 		{
 			if(this.monoms.get(i).get_power()==m1.get_power())
 			{
@@ -145,7 +146,7 @@ public class Polynom implements Polynom_able{
 				break;
 			}
 		}
-		if(substract==false)
+		if(substract==false)//if the given monom power is not part of the monoms list that represent the polynom, sub it and sort
 		{
 			m1.multiply(Monom.MINUS1);
 			this.monoms.add(m1);
@@ -191,16 +192,16 @@ public class Polynom implements Polynom_able{
 	@Override
 	public boolean equals(Object p1) {
 		Polynom p2;
-		if(p1 instanceof Monom) {
+		if(p1 instanceof Monom) { //Monom consider as polynom with one element, if object is a monom cast it to polynom
 			p2 = new Polynom(p1.toString());
 		}
 		else if(p1 instanceof Polynom_able) {
 			p2 = (Polynom) p1;
 		}
 		else {
-			return false;
+			return false; //if obj is not a polynom or monom, return false
 		}
-			Polynom_able pTmp = this.copy();
+			Polynom_able pTmp = this.copy(); //substract two polynoms to find if diff is zero
 			if (pTmp == null || p1 == null) {
 				return false;
 			}

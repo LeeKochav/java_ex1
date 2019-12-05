@@ -56,6 +56,11 @@ public class Functions_GUI implements functions {
         StdDraw.setYscale(ry.get_min(), ry.get_max());
 
         ///// x axis
+        StdDraw.setPenColor(Color.LIGHT_GRAY);
+        StdDraw.setPenRadius(0.003);
+        for (double i = ry.get_min(); i <= ry.get_max(); i +=1) {
+            StdDraw.line(rx.get_min(), i, rx.get_max(), i);
+        }
         StdDraw.setPenColor(Color.BLACK);
         StdDraw.setPenRadius(0.005);
         StdDraw.line(rx.get_min(), 0, rx.get_max(), 0);
@@ -70,7 +75,13 @@ public class Functions_GUI implements functions {
         for (double i = rx.get_min(); i <= rx.get_max(); i +=1) {
             StdDraw.text(i + 0.01, -0.1, Integer.toString((int) (i)));
         }
+
         ///// y axis
+        StdDraw.setPenColor(Color.LIGHT_GRAY);
+        StdDraw.setPenRadius(0.003);
+        for (double i = rx.get_min(); i <= rx.get_max(); i +=1) {
+            StdDraw.line(i, ry.get_min(), i, ry.get_max());
+        }
         StdDraw.setPenColor(Color.BLACK);
         StdDraw.setPenRadius(0.005);
         StdDraw.line(0, ry.get_min(), 0, ry.get_max());
@@ -115,11 +126,11 @@ public class Functions_GUI implements functions {
             e.printStackTrace();
         }
         try {
-             width = obj.get("width").getAsInt();
-             height = obj.get("height").getAsInt();
-             resolution = obj.get("height").getAsInt();
-             rx = gson.fromJson(obj.get("rx"), Range.class);
-             ry = gson.fromJson(obj.get("ry"), Range.class);
+             width = obj.get("Width").getAsInt();
+             height = obj.get("Height").getAsInt();
+             resolution = obj.get("Resolution").getAsInt();
+             rx = gson.fromJson(obj.get("Range_X"), Range.class);
+             ry = gson.fromJson(obj.get("Range_Y"), Range.class);
             }
         catch(Exception e)
         {
@@ -198,15 +209,16 @@ public class Functions_GUI implements functions {
     public void clear() {
         funcs.clear();
     }
+
     public static void main(String[] args) throws IOException {
         String str="file.txt";
         Functions_GUI f=new Functions_GUI();
         f.initFromFile(str);
 
-       // System.out.println(f.funcs.toString());
+     //  System.out.println(f.funcs.toString());
         Range rx=new Range(-10,10);
         Range ry=new Range(-5,15);
-        //f.drawFunctions(1000,1200,rx,ry,100);
-        f.drawFunctions("n.json");
-    }
+     //  f.drawFunctions(1000,1200,rx,ry,100);
+       f.drawFunctions("n.json");
+   }
 }
