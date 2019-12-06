@@ -279,43 +279,20 @@ public class ComplexFunction implements complex_function {
 
     public boolean equals(Object obj) {
 
-        if(obj==null|this==null)
-        {
+        if (obj == null || this == null) {
             return false;
         }
-        if(obj instanceof ComplexFunction)
-        {
-            ComplexFunction tmp=(ComplexFunction)obj;
-            if(this.fx1.equals(tmp.fx1))
-            {
-                if ((this.fx2==null&&tmp.fx2!=null)||(this.fx2==null&&tmp.fx2==null)) // check if both complex functions has left&right
-                {
+        if (obj instanceof function) {
+            function tmp = (function) obj;
+            for (int i = 0; i < 1000000; i++) {
+                if (this.f(i) != tmp.f(i)) {
                     return false;
                 }
-                if(!(this.fx2==null&&tmp.fx2==null)) {
-                    if (this.fx2.equals(tmp.fx2)) {
-                        if (this.op.equals(tmp.op)) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    } else {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return true;
-                }
             }
-            else
-            {
-                return false;
-            }
+            return true;
         }
-            return false;
+        return false;
     }
-
     private Operation convert(String opStr)
     {
         Operation op=null;

@@ -31,23 +31,21 @@ class MonomTest {
    }
     @ Test
     void initFromString() {
-        ArrayList<Monom> monomTest1=new ArrayList<>();
+        Monom m=new Monom(0,0);
         String []monomStrTest={"-34","-x","-3.5x^4","-7a3x","-x^a","-3.5x^-6"};
         int expected=3;
-        int actual=0;
-        int notCreated=0;
+        int actual=monomStrTest.length;
 
         for(int i=0; i<monomStrTest.length; i++)
         {
             try {
-                monomTest1.add(new Monom(monomStrTest[i]));
+                function f=m.initFromString(monomStrTest[i]);
             }
             catch(RuntimeException error){
-                notCreated++;
+               actual--;
                 System.out.println(error.getMessage()+" "+monomStrTest[i]);
             }
         }
-        actual=monomStrTest.length-notCreated;
         assertEquals(expected,actual);
     }
 

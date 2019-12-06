@@ -118,6 +118,8 @@ public class Functions_GUI implements functions {
         int width=0;
         int height=0;
         int resolution=0;
+        double [] rangeX=new double[2];
+        double [] rangeY=new double[2];
         Range rx=null;
         Range ry=null;
         try {
@@ -129,8 +131,10 @@ public class Functions_GUI implements functions {
              width = obj.get("Width").getAsInt();
              height = obj.get("Height").getAsInt();
              resolution = obj.get("Resolution").getAsInt();
-             rx = gson.fromJson(obj.get("Range_X"), Range.class);
-             ry = gson.fromJson(obj.get("Range_Y"), Range.class);
+            rangeX = gson.fromJson(obj.get("Range_X"), double[].class);
+            rangeY = gson.fromJson(obj.get("Range_Y"), double[].class);
+            rx=new Range(rangeX[0],rangeX[1]);
+            ry=new Range(rangeY[0],rangeY[1]);
             }
         catch(Exception e)
         {
@@ -214,11 +218,12 @@ public class Functions_GUI implements functions {
         String str="file.txt";
         Functions_GUI f=new Functions_GUI();
         f.initFromFile(str);
+        System.out.println(f.funcs.toString());
 
      //  System.out.println(f.funcs.toString());
-        Range rx=new Range(-10,10);
-        Range ry=new Range(-5,15);
+    //    Range rx=new Range(-10,10);
+      //  Range ry=new Range(-5,15);
      //  f.drawFunctions(1000,1200,rx,ry,100);
-       f.drawFunctions("n.json");
+       //f.drawFunctions("n.json");
    }
 }

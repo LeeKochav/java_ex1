@@ -1,13 +1,7 @@
 {
 	"Width": 1000,
 	"Height": 1000,
-	"Range_X":{
-		"_min":-10,
-		"_max": 10
-	},
-	"Range_Y":{
-		"_min": -5,
-		"_max": 15
-	},
+	"Range_X":[-10,10],
+	"Range_Y":[-5,15],
 	"Resolution":100
 }

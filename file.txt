@@ -1,4 +1,4 @@
 mul(plus(3x,4x^4),div(60x^2,5))
 2
 x^3-1
-div(1,x)
+div(x^2,3)

@@ -45,23 +45,21 @@ class PolynomTest {
     }
     @Test
     void initFromString() {
-        ArrayList<Polynom> polynomsTest=new ArrayList<>();
-        int expected=3;
-        int actual=0;
-        int notCreated=0;
+        Polynom p=new Polynom();
         String[] polynomStr = {"1x+5a^7", "8x^3+4x+2", "-x^4+3x^2", "7x+8x^2+0.5x^4","-3a"};
+        int expected=3;
+        int actual=polynomStr.length;
         for (int i = 0; i < polynomStr.length; i++) {
 
             try{
-                polynomsTest.add(new Polynom(polynomStr[i]));
+                function f=p.initFromString(polynomStr[i]);
             }
             catch(RuntimeException error)
             {
-                notCreated++;
+                actual--;
                 System.out.println(error.getMessage()+" "+polynomStr[i]);
             }
         }
-        actual=polynomStr.length-notCreated;
         assertEquals(expected,actual);
 
     }
