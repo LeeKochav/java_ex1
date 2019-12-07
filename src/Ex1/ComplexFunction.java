@@ -293,6 +293,12 @@ public class ComplexFunction implements complex_function {
         }
         return false;
     }
+
+    /**
+     * Convert operation given as string into the specific enum operation type
+     * @param opStr
+     * @return
+     */
     private Operation convert(String opStr)
     {
         Operation op=null;

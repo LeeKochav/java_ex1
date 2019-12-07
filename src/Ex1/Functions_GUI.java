@@ -13,7 +13,7 @@ import java.awt.color.*;
 
 public class Functions_GUI implements functions {
 
-    ArrayList<function> funcs;
+    private ArrayList<function> funcs;
 
     public Functions_GUI() {
         funcs = new ArrayList<function>();
@@ -26,7 +26,7 @@ public class Functions_GUI implements functions {
         while ((line = br.readLine()) != null) {
             String str = new String(line);
             function f=cf.initFromString(str);
-            funcs.add(f);
+            this.funcs.add(f);
         }
         br.close();
     }
@@ -37,7 +37,7 @@ public class Functions_GUI implements functions {
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<this.funcs.size(); i++)
         {
-            sb.append(funcs.get(i).toString()+"\n");
+            sb.append(this.funcs.get(i).toString()+"\n");
         }
         pw.write(sb.toString());
         pw.close();
@@ -93,8 +93,8 @@ public class Functions_GUI implements functions {
 
         //draw functions
         Random rand= new Random();
-        for (int i = 0; i < funcs.size(); i++) {
-            function fx = funcs.get(i);
+        for (int i = 0; i < this.funcs.size(); i++) {
+            function fx = this.funcs.get(i);
             int r =rand.nextInt(256);
             int g = rand.nextInt(256);
             int b = rand.nextInt(256);
@@ -150,80 +150,71 @@ public class Functions_GUI implements functions {
 
     @Override
     public int size() {
-        return funcs.size();
+        return this.funcs.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return funcs.isEmpty();
+        return this.funcs.isEmpty();
     }
 
     @Override
     public boolean contains(Object o) {
-        return funcs.contains(o);
+        return this.funcs.contains(o);
     }
 
     @Override
     public Iterator<function> iterator() {
-        return funcs.iterator();
+        return this.funcs.iterator();
     }
 
     @Override
     public Object[] toArray() {
-        return funcs.toArray();
+        return this.funcs.toArray();
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
-        return funcs.toArray(a);
+        return this.funcs.toArray(a);
     }
 
     @Override
     public boolean add(function function) {
-        return funcs.add(function);
+        return this.funcs.add(function);
     }
 
 
     @Override
     public boolean remove(Object o) {
-        return funcs.remove(o);
+        return this.funcs.remove(o);
     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return funcs.containsAll(c);
+        return this.funcs.containsAll(c);
     }
 
     @Override
     public boolean addAll(Collection<? extends function> c) {
-        return funcs.addAll(c);
+        return this.funcs.addAll(c);
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return funcs.removeAll(c);
+        return this.funcs.removeAll(c);
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return funcs.retainAll(c);
+        return this.funcs.retainAll(c);
     }
 
     @Override
     public void clear() {
-        funcs.clear();
+        this.funcs.clear();
     }
 
-    public static void main(String[] args) throws IOException {
-        String str="file.txt";
-        Functions_GUI f=new Functions_GUI();
-        f.initFromFile(str);
-        System.out.println(f.funcs.toString());
-
-     //  System.out.println(f.funcs.toString());
-    //    Range rx=new Range(-10,10);
-      //  Range ry=new Range(-5,15);
-     //  f.drawFunctions(1000,1200,rx,ry,100);
-       //f.drawFunctions("n.json");
-   }
+    public ArrayList<function> getFuncs() {
+        return funcs;
+    }
 }

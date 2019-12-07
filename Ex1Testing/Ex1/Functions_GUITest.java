@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,7 +29,7 @@ class Functions_GUITest {
             funcs.initFromFile(file);
             funcs.saveToFile(afterSaveToFile);
             funcs2.initFromFile(afterSaveToFile);
-            assertTrue(funcs.funcs.containsAll(funcs2.funcs));
+            assertTrue(funcs.getFuncs().containsAll(funcs2.getFuncs()));
         } catch (IOException e) {
             e.printStackTrace();
         }
