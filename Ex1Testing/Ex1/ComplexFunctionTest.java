@@ -38,6 +38,7 @@ class ComplexFunctionTest {
         cf = new ComplexFunction("plus", p1,p2);
         cf1 = new ComplexFunction("div", p1,p3);
         cf2 = new ComplexFunction(p1);
+
     }
 
     @Test

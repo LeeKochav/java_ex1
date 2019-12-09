@@ -21,7 +21,7 @@ public class ComplexFunction implements complex_function {
         {
             throw new RuntimeException("fx1 cannot be null");
         }
-        this.fx1 = fx1;
+        this.fx1 = fx1.copy();
         this.fx2 = null;
         this.op = Operation.None;
     }
@@ -31,8 +31,8 @@ public class ComplexFunction implements complex_function {
         {
             throw new RuntimeException("fx1 cannot be null");
         }
-        this.fx1 = fx1;
-        this.fx2 = fx2;
+        this.fx1 = fx1.copy();
+        this.fx2 = fx2.copy();
         this.op = op;
     }
     public ComplexFunction(String s, function fx1, function fx2) {
@@ -40,8 +40,8 @@ public class ComplexFunction implements complex_function {
         {
             throw new RuntimeException("fx1 cannot be null");
         }
-        this.fx1 = fx1;
-        this.fx2 = fx2;
+        this.fx1 = fx1.copy();
+        this.fx2 = fx2.copy();
         this.op = convert(s);
     }
 
@@ -54,24 +54,24 @@ public class ComplexFunction implements complex_function {
     @Override
     public void plus(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Plus;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Plus;
     }
 
     @Override
     public void mul(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Times;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Times;
 
     }
@@ -79,12 +79,12 @@ public class ComplexFunction implements complex_function {
     @Override
     public void div(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Divid;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Divid;
 
     }
@@ -92,12 +92,12 @@ public class ComplexFunction implements complex_function {
     @Override
     public void max(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Max;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Max;
 
     }
@@ -105,12 +105,12 @@ public class ComplexFunction implements complex_function {
     @Override
     public void min(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Min;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Min;
 
     }
@@ -118,12 +118,12 @@ public class ComplexFunction implements complex_function {
     @Override
     public void comp(function f1) {
         if (this.fx2 == null) {
-            this.fx2 = f1;
+            this.fx2 = f1.copy();
             this.op = Operation.Comp;
             return;
         }
         this.fx1 = new ComplexFunction(this.getOp(), this.fx1, this.fx2);
-        this.fx2 = f1;
+        this.fx2 = f1.copy();
         this.op = Operation.Comp;
 
     }
