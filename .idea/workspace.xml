@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68602c22-9516-4d84-a726-7482aab8874d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/afterSaveToFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/afterSaveToFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Ex1/Ex1/Functions_GUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex1/Ex1/Functions_GUITest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,8 +49,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lee\IdeaProjects\Ex1\src" />
       <recent name="C:\Users\Lee\IdeaProjects\Ex1\src\Ex1" />
+      <recent name="C:\Users\Lee\IdeaProjects\Ex1\src" />
       <recent name="C:\Users\Lee\IdeaProjects\Ex1\tests\Ex1" />
       <recent name="C:\Users\Lee\IdeaProjects\Ex1\tests" />
       <recent name="C:\Users\Lee\IdeaProjects\Ex1\src\myMath" />
@@ -65,9 +68,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Functions_GUITest.initAndSaveFromFile">
-    <configuration name="Functions_GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex1.Functions_GUI" />
+  <component name="RunManager" selected="JUnit.Functions_GUITest">
+    <configuration name="Functions_GUITest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex1.Functions_GUITest1" />
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -144,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Functions_GUITest.initAndSaveFromFile" />
         <item itemvalue="JUnit.Functions_GUITest" />
+        <item itemvalue="Application.Functions_GUITest1" />
+        <item itemvalue="JUnit.Functions_GUITest.initAndSaveFromFile" />
         <item itemvalue="JUnit.MonomTest.initFromString" />
         <item itemvalue="JUnit.PolynomTest.initFromString" />
-        <item itemvalue="Application.Functions_GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +176,7 @@
       <workItem from="1575619851727" duration="1795000" />
       <workItem from="1575631877465" duration="1300000" />
       <workItem from="1575710255959" duration="684000" />
-      <workItem from="1575731183462" duration="6672000" />
+      <workItem from="1575731183462" duration="9060000" />
     </task>
     <servers />
   </component>
