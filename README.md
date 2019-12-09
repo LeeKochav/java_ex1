@@ -29,7 +29,7 @@ This class represent a simple monom of shape ax^b where a is a real number and b
 This class represent a simple polynom of shape a1x^b1+a2x^b2….
 The polynom class represent as an arraylist of monoms.
 
-##Implemented functions:
+## Implemented functions:
 -	Polynom()-empty constractor.
 -	Polynom(String)- creates  a new valid polynom within a given string input. We use the split string function to separate the polynom to monoms and check if all monoms are valid and creates a new polynom.
 -	toString- returns the polynom as a string.
