@@ -11,7 +11,7 @@ Complex function is a combination of functions and operations.
 This class represent a simple monom of shape ax^b where a is a real number and b is an integer. 
  
 ## Class Polynom
-This class represent a simple polynom of shape a1x^b1+a2x^b2….
+This class represent a simple polynom of shape a1x^b1+a2x^b2â€¦.
 The polynom class represent as an arraylist of monoms.
 
 ## Class ComplexFunction
@@ -21,11 +21,14 @@ This class represent a complex function type y=g(f1(x),f2(x)), where both f1,f2 
 ## Class Function_GuI
 This class represents a collection of mathematical functions which can be presented on a GUI window and can be saved (and load) to file. 
 
-##Relevant files for testing 
+## Relevant files for testing 
 -	file.txt
 -	afterSaveToFile
 
-##Libraries
+## Libraries
 -	gson-2.8.5
 -	junit-jupiter-api-5.4.0
 -	junit-platform-commons-1.4.0
+
+
+More details can be found on Wiki
