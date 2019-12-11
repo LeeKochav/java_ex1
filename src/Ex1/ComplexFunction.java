@@ -190,7 +190,7 @@ public class ComplexFunction implements complex_function {
 
     @Override
     public function initFromString(String s) {
-
+        s=s.replaceAll(" ","");
         int indexFirstLeft=s.indexOf('(');
         int indexLastRight=s.lastIndexOf(')');
         if(indexLastRight==-1||indexFirstLeft==-1) //base case of the recursion
@@ -199,7 +199,7 @@ public class ComplexFunction implements complex_function {
             return p;
         }
         String operation=s.substring(0,indexFirstLeft);
-        String tmp=s.substring(indexFirstLeft+1,indexLastRight); //tmp is the substring that contains f1,f2
+        String tmp=s.substring(indexFirstLeft+1,s.length()-1); //tmp is the substring that contains f1,f2
         Stack<Character> st=new Stack<Character>(); // stack contains the opening brackets
         String f1="";
         String f2="";
