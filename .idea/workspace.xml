@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68602c22-9516-4d84-a726-7482aab8874d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex1Testing/Ex1/MonomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1Testing/Ex1/MonomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex1Testing/Ex1/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1Testing/Ex1/PolynomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Ex1/Ex1/ComplexFunctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex1/Ex1/ComplexFunctionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Ex1/Ex1/MonomTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex1/Ex1/MonomTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Ex1/Ex1/PolynomTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex1/Ex1/PolynomTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ComplexFunctionTest">
+  <component name="RunManager" selected="JUnit.PolynomTest.testToString">
     <configuration name="ComplexFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
@@ -87,22 +78,6 @@
       <option name="PACKAGE_NAME" value="Ex1" />
       <option name="MAIN_CLASS_NAME" value="Ex1.ComplexFunctionTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComplexFunctionTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ex1" />
-      <option name="MAIN_CLASS_NAME" value="Ex1.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="testEquals" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,13 +127,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PolynomTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1" />
+      <option name="MAIN_CLASS_NAME" value="Ex1.PolynomTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PolynomTest.testToString" />
         <item itemvalue="JUnit.ComplexFunctionTest" />
         <item itemvalue="JUnit.Functions_GUITest" />
         <item itemvalue="JUnit.PolynomTest" />
         <item itemvalue="JUnit.MonomTest" />
-        <item itemvalue="JUnit.ComplexFunctionTest.testEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +179,9 @@
       <workItem from="1575914766570" duration="1461000" />
       <workItem from="1576055212874" duration="1098000" />
       <workItem from="1576058766221" duration="3203000" />
+      <workItem from="1576065377058" duration="614000" />
+      <workItem from="1576066545696" duration="171000" />
+      <workItem from="1576069088530" duration="956000" />
     </task>
     <servers />
   </component>

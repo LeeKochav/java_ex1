@@ -102,29 +102,30 @@ public class Polynom implements Polynom_able{
 
 	@Override
 	public void add(Monom m1) {
-
+		Monom tmp=new Monom(m1);
 		boolean add=false;
-		if(m1==null){
+		if(tmp==null){
 			return;
 		}
-		if(this.monoms==null) //if this == empty , add the new monom
+		if(this.monoms==null) //if this == empty , ad
+			// d the new monom
 		{
-			this.monoms.add(m1);
+			this.monoms.add(tmp);
 			this.monoms.sort(_Comp);
 			return;
 		}
 		for(int i=0; i<this.monoms.size(); i++) //check if the given monom power is already in the polynom to add the coeff
 		{
-			if(this.monoms.get(i).get_power()==m1.get_power())
+			if(this.monoms.get(i).get_power()==tmp.get_power())
 			{
-				this.monoms.get(i).add(m1);
+				this.monoms.get(i).add(tmp);
 				add=true;
 				break;
 			}
 		}
 		if(add==false) //if the given monom power is not part of the monoms list that represent the polynom, add it and sort
 		{
-			this.monoms.add(m1);
+			this.monoms.add(tmp);
 			this.monoms.sort(_Comp);
 		}
 	}
