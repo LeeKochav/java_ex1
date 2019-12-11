@@ -1,5 +1,7 @@
 package Ex1;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -33,6 +35,7 @@ public class Polynom implements Polynom_able{
 	 * @param s: is a string represents a Polynom
 	 */
 	public Polynom(String s) {
+		s=s.replaceAll(" ","");
 		this.monoms=new ArrayList<Monom>();
 		String  splitPoly[]=s.split("(?=[+-])");
 

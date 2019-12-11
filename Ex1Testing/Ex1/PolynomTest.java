@@ -46,7 +46,7 @@ class PolynomTest {
     @Test
     void initFromString() {
         Polynom p=new Polynom();
-        String[] polynomStr = {"1x+5a^7", "8x^3+4x+2", "-x^4+3x^2", "7x+8x^2+0.5x^4","-3a"};
+        String[] polynomStr = {"1x+    5a^7", "  8x^3 -4x+2", "-x^4+3x^2", "7x   +8x^2  +0.5x^4 ","       "};
         int expected=3;
         int actual=polynomStr.length;
         for (int i = 0; i < polynomStr.length; i++) {

@@ -281,7 +281,7 @@ public class ComplexFunction implements complex_function {
         }
         if (obj instanceof function) {
             function tmp = (function) obj;
-            for (int i = 0; i < 1000000; i++) {
+            for (double i = 0; i < 1000000; i++) {
                 if (this.f(i) != tmp.f(i)) {
                     return false;
                 }

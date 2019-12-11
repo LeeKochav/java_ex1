@@ -31,7 +31,7 @@ class MonomTest {
     @ Test
     void initFromString() {
         Monom m=new Monom(0,0);
-        String []monomStrTest={"-34","-x","-3.5x^4","-7a3x","-x^a","-3.5x^-6"};
+        String []monomStrTest={"-3   4","- x","-3.5x^4","-7a3x","-x^a","-3.5x^-6"};
         int expected=3;
         int actual=monomStrTest.length;
 

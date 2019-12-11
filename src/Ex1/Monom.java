@@ -67,7 +67,7 @@ public class Monom implements function{
 	 * @param s
 	 */
 	public Monom(String s) {
-
+		s=s.replaceAll(" ","");
 		boolean isValidString;
 		if(s.contains("x"))
 		{
