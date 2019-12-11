@@ -1,8 +1,5 @@
 package Ex1;
 
-
-import sun.text.normalizer.UCharacter;
-
 import java.util.Stack;
 
 public class ComplexFunction implements complex_function {
