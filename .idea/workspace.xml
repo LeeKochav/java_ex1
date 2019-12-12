@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68602c22-9516-4d84-a726-7482aab8874d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Ex1/Ex1/PolynomTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex1/Ex1/PolynomTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +186,7 @@
       <workItem from="1576069088530" duration="1080000" />
       <workItem from="1576071318073" duration="170000" />
       <workItem from="1576089485123" duration="1503000" />
+      <workItem from="1576148092479" duration="1168000" />
     </task>
     <servers />
   </component>

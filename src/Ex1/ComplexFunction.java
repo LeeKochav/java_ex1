@@ -190,6 +190,10 @@ public class ComplexFunction implements complex_function {
 
     @Override
     public function initFromString(String s) {
+        if(s==null)
+        {
+            throw new RuntimeException("Invalid input");
+        }
         s=s.replaceAll(" ","");
         int indexFirstLeft=s.indexOf('(');
         int indexLastRight=s.lastIndexOf(')');

@@ -35,6 +35,10 @@ public class Polynom implements Polynom_able{
 	 * @param s: is a string represents a Polynom
 	 */
 	public Polynom(String s) {
+		if(s==null)
+		{
+			throw new RuntimeException("Invalid input");
+		}
 		s=s.replaceAll(" ","");
 		this.monoms=new ArrayList<Monom>();
 		String  splitPoly[]=s.split("(?=[+-])");

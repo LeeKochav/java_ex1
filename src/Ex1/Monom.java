@@ -67,6 +67,10 @@ public class Monom implements function{
 	 * @param s
 	 */
 	public Monom(String s) {
+		if(s==null)
+		{
+			throw new RuntimeException("Invalid input");
+		}
 		s=s.replaceAll(" ","");
 		boolean isValidString;
 		if(s.contains("x"))
